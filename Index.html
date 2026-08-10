@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Agrinho 2026 - Fazenda do Futuro</title>
+    <style>
+        /* Estilização básica para o projeto */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f9f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #4caf50;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #2e7d32;
+        }
+
+        .btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #388e3c;
+        }
+
+        .quiz-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #2e7d32;
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Agrinho 2026: Conectando o Campo e a Tecnologia</h1>
+        <p>Inovação, Sustentabilidade e Inteligência Artificial na Agricultura</p>
+    </header>
+
+    <main>
+        <h2>Simulador de Fazenda Sustentável</h2>
+        <div class="dashboard">
+            <div class="card">
+                <h3>Umidade do Solo</h3>
+                <p id="txt-umidade">Status: <strong style="color: #ed6c02;">Seco (32%)</strong></p>
+                <button class="btn" onclick="irrigar()">Ligar Irrigação</button>
+            </div>
+            <div class="card">
+                <h3>Água Economizada</h3>
+                <p><strong id="txt-agua" style="font-size: 1.5rem; color: #1976d2;">0</strong> Litros</p>
+                <p>Graças ao monitoramento IoT</p>
+            </div>
+            <div class="card">
+                <h3>Defensivos Biológicos</h3>
+                <p>Status da Lavoura: <span id="txt-status" style="color: #4caf50; font-weight: bold;">Protegida</span>
+                </p>
+                <button class="btn" onclick="aplicarBio()">Aplicar Bio-defensivo</button>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 3rem 0;">
+
+        <div class="quiz-section">
+            <h2>Desafio Agrinho: Teste seus conhecimentos</h2>
+            <div id="quiz-container">
+                <p id="pergunta"><strong>Pergunta:</strong> Qual é o principal benefício da agricultura de precisão para
+                    o meio ambiente?</p>
+                <button class="btn" style="display:block; width:100%; margin: 0.5rem 0; text-align:left;"
+                    onclick="verificarResposta(false)">A) Aumentar o uso de tratores pesados.</button>
+                <button class="btn" style="display:block; width:100%; margin: 0.5rem 0; text-align:left;"
+                    onclick="verificarResposta(true)">B) Economizar água e recursos aplicando insumos apenas onde
+                    necessário.</button>
+                <button class="btn" style="display:block; width:100%; margin: 0.5rem 0; text-align:left;"
+                    onclick="verificarResposta(false)">C) Substituir completamente o trabalho humano por robôs.</button>
+            </div>
+            <p id="resultado-quiz" style="margin-top: 1rem; font-weight: bold;"></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Projeto Desenvolvido para o Concurso Agrinho.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f3f7f4;
+    /* Fundo verde-claro bem suave */
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   CABEÇALHO (HEADER)
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, #1b5e20 0%, #4caf50 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (MAIN)
+   ========================================================================== */
+main {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+h2 {
+    color: #1b5e20;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Linha decorativa embaixo dos títulos */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #8bc34a;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   PAINEL DE CARTÕES (DASHBOARD)
+   ========================================================================== */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid #4caf50;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito flutuante ao passar o mouse nos cards */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: #2e7d32;
+    font-size: 1.3rem;
+}
+
+.card p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   BOTÕES
+   ========================================================================== */
+.btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 3px 6px rgba(76, 175, 80, 0.3);
+}
+
+.btn:hover {
+    background-color: #388e3c;
+    box-shadow: 0 4px 8px rgba(56, 142, 60, 0.4);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   SEÇÃO DO QUIZ
+   ========================================================================== */
+.quiz-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 3rem;
+}
+
+#quiz-container {
+    margin-top: 1.5rem;
+}
+
+#pergunta {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #37474f;
+}
+
+/* Botões de opção do Quiz */
+.quiz-section .btn {
+    display: block;
+    width: 100%;
+    margin: 0.8rem 0;
+    text-align: left;
+    background-color: #f1f8e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+    box-shadow: none;
+}
+
+.quiz-section .btn:hover {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+    color: #1b5e20;
+}
+
+#resultado-quiz {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #1b5e20;
+    color: #a5d6a7;
+    margin-top: 4rem;
+    font-size: 0.95rem;
+}
+
+/* Separador visual customizado */
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    margin: 4rem 0;
+}
